@@ -5,14 +5,17 @@
 <script src="https://raw.githack.com/AR-js-org/AR.js/3.0.0/aframe/build/aframe-ar-nft.js"></script>
 <body style='margin : 0px; overflow: hidden;'>
 <a-assets>
-	<video id="ar-video" autoplay loop="true" muted="true" src="https://www.youtube.com/watch?v=za0RJCazeh4&pp=ygUDYWt0" </video>
+	<iframe id="ytplayer" type="text/html" width="640" height="360" 
+		src="https://www.youtube.com/watch?v=za0RJCazeh4&pp=ygUDYWt0" 
+		frameborder="0"></iframe>
+	<!--<video id="ar-video" autoplay loop="true" muted="true" src="8ch.mp4" </video>-->
 	<video id="ar-video2" autoplay loop="true" muted="true" src="8ch.mp4" </video>
 </a-assets>
     <!-- デバッグ用の画面表示、VR用のボタンをそれぞれ非表示に -->
     <a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
     <!-- 今回作成した『.patt』ファイルを読み込む -->
 	<a-marker type='pattern' url='pattern-Rpo3d.patt'><!-- 3d立ってるぽち -->
-		<a-video src="#ar-video" width="1.8" height="1.2" position="0 0 0" rotation="270 0 0" play="true"></a-video>
+		<a-video src="#ytplayer" width="1.8" height="1.2" position="0 0 0" rotation="270 0 0" play="true"></a-video>
 	</a-marker>
 	<a-marker type='pattern' url='pattern-po3d.patt'><!-- 青ぽち -->
 		<a-video src="#ar-video2" width="1.8" height="1.2" position="0 0 0" rotation="270 0 0" play="true"></a-video>
