@@ -6,14 +6,15 @@
 <body style='margin : 0px; overflow: hidden;'>
 <a-assets>
         <!-- 3Dモデルを読み込む -->
-        <a-asset-item id="potipanci" src="chaei.glb" scale="1 1 1"></a-asset-item>
+        <a-asset-item id="potipanci" src="potipa_panch.glb" scale="1 1 1"></a-asset-item>
 	<video id="ar-video2" autoplay loop="true" muted="true" src="8ch.mp4" </video>
 </a-assets>
     <!-- デバッグ用の画面表示、VR用のボタンをそれぞれ非表示に -->
     <a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
     <!-- 今回作成した『.patt』ファイルを読み込む -->
 	<a-marker type='pattern' url='pattern-Rpo3d.patt'><!-- 3d立ってるぽち -->
-		<a-video src="#ar-video" width="1.8" height="1.2" position="0 0 0" rotation="270 0 0" play="true"></a-video>
+		        <!-- 3Dモデルを呼び出す -->
+        	<a-entity gltf-model="#potipanci" rotation="-90 0 0"></a-entity>
 	</a-marker>
 	<a-marker type='pattern' url='pattern-po3d.patt'><!-- 青ぽち -->
 		<a-video src2="#ar-video2" width="1.8" height="1.2" position="0 0 0" rotation="270 0 0" play="true"></a-video>
@@ -30,7 +31,9 @@
       window.addEventListener('click', function () {
 	var v = document.querySelector('src);      
       v.play();
-      });    
+      });
+	          //glTFの表示が暗くなる問題に対処
+      document.querySelector("a-scene").renderer.gammaOutput=true;
     </script>
   </body>
 </html>
