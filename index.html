@@ -22,7 +22,17 @@
 		<a-marker type='pattern' url='pattern-po3d.patt'><!-- 青ぽち -->
 			<a-video src2="#ar-video2" width="1.8" height="1.2" position="0 0 0" rotation="270 0 0" play="true"></a-video>
 		</a-marker>	
-		<!-- カメラを追加 -->    
+		<!-- カメラを追加 -->  
+		<a-entity camera look-controls>
+  		<a-entity cursor="fuse: true; fuseTimeout: 500"
+            		position="0 0 -1"
+            		geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+            		material="color: black; shader: flat">
+  		</a-entity>
+		</a-entity>
+
+
+		
 		<a-camera position="0 0 5">
         		<a-cursor color="gray" </a-cursor>
 		</a-camera>
