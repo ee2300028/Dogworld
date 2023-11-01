@@ -27,41 +27,41 @@
    <img id="siba" src="assets/siba.PNG">
    <!-- <video id="ca-video" muted="true" src="https://www.akt.co.jp/nenga2021/ad01.mp4"</video>-->
    <!-- 3Dモデルをプリロード -->
-   <a-asset-item id="model1" src="gld/potipa_walk.glb"></a-asset-item>
-   <a-asset-item id="model2" src="gld/potipa_jumpaction.glb"></a-asset-item>
-   <a-asset-item id="model3" src="gld/potipa_jump.glb"></a-asset-item>
-   <a-asset-item id="model4" src="gld/potipa_byebye.glb"></a-asset-item>
-   <a-asset-item id="model5" src="gld/potipa_walk.glb"></a-asset-item>
+   <a-asset-item id="model1" src="./gld/potipa_walk.glb"></a-asset-item>
+   <a-asset-item id="model2" src="./gld/potipa_jumpaction.glb"></a-asset-item>
+   <a-asset-item id="model3" src="./gld/potipa_jump.glb"></a-asset-item>
+   <a-asset-item id="model4" src="./gld/potipa_byebye.glb"></a-asset-item>
+   <a-asset-item id="model5" src="./gld/potipa_walk.glb"></a-asset-item>
   
  </a-assets>
  
 
  
   <!-- 作成したマーカーでのソース potipa_panch.glb-->
-  <a-marker type='pattern' url='pattern/pattern-htti_qr.patt'>
+  <a-marker type='pattern' url='./pattern/pattern-htti_qr.patt'>
      <a-image src="#siba" position="0 5 0.5" rotation="0 0 0" scale="1 1 1"></a-image>
 　	<!-- idを指定して3Dモデルを表示 -->
   　	<a-entity gltf-model="#model1" animation-mixer position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>
   </a-marker>
    
   <!--2 作成したマーカーでのソース potipa_walk.glb-->
-  <a-marker type='pattern' url='pattern/pattern-50.patt'>
+  <a-marker type='pattern' url='./pattern/pattern-50.patt'>
      <!--<a-video src="#ca-video" width="3.6" height="2.4" position="0 5 0.5" rotation="270 0 0" play="true"></a-video>-->
 　	  <a-entity gltf-model="#model2" animation-mixer position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>	
   </a-marker>   
    
   <!--3 作成したマーカーでのソース potipa_jump.glb-->
-  <a-marker type='pattern' url='pattern/pattern-akt.patt'>
+  <a-marker type='pattern' url='./pattern/pattern-akt.patt'>
 　	 <a-entity gltf-model="#model3" animation-mixer position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>
  </a-marker>
  
  <!--4 作成したマーカーでのソース potipa_byebye.glb-->
-  <a-marker type='pattern' url='pattern/pattern-restart.patt'>
+  <a-marker type='pattern' url='./pattern/pattern-restart.patt'>
 　	 <a-entity gltf-model="#model4" animation-mixer position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>
  </a-marker>
  
   <!--5 作成したマーカーでのソース pattern-gyu.patt-->
- <a-marker type='pattern' url='pattern/pattern-gyu.patt'>
+ <a-marker type='pattern' url='./pattern/pattern-gyu.patt'>
 　	 <a-entity gltf-model="#model5" animation-mixer position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>
  </a-marker>
  
