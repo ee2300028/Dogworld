@@ -24,7 +24,7 @@
 <a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
 
  <a-assets>
-   <img id="siba" src="assets/siba.PNG">
+   <img id="siba" src="./assets/siba.PNG">
    <!-- <video id="ca-video" muted="true" src="https://www.akt.co.jp/nenga2021/ad01.mp4"</video>-->
    <!-- 3Dモデルをプリロード -->
    <a-asset-item id="model1" src="./gld/potipa_walk.glb"></a-asset-item>
@@ -38,7 +38,7 @@
 
  
   <!-- 作成したマーカーでのソース potipa_panch.glb-->
-  <a-marker type='pattern' url='./pattern/pattern-htti_qr.patt'>
+  <a-marker type='pattern' url='./pattern/pattern-git_url'>
      <a-image src="#siba" position="0 5 0.5" rotation="0 0 0" scale="1 1 1"></a-image>
 　	<!-- idを指定して3Dモデルを表示 -->
   　	<a-entity gltf-model="#model1" animation-mixer position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>
